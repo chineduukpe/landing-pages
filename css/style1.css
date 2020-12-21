@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth !important;
+  overflow-x: hidden;
 }
 
 body {
@@ -682,6 +683,7 @@ footer .newsletter-holder h4, footer .newsletter-holder small {
   right: -10vw;
   -webkit-transition: right 300ms linear;
   transition: right 300ms linear;
+  z-index: 100;
 }
 
 #back-to-top a {

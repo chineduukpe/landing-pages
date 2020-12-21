@@ -1,0 +1,95 @@
+@import '../../css/custom_variables';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&family=Raleway:wght@200;400;800&display=swap');
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Nunito Sans","San Serif";
+}
+
+body{
+    overflow-x: hidden;
+}
+.share-container{
+    width: 100vw;
+    height: 100vh;
+    .close{
+        position: absolute;
+        top: 2em;
+        left: 2em;
+        color: $white;
+    }
+    .share-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        .mail-svg{
+            // padding: .4em;
+            margin: 0;
+
+            svg{
+                width: 4em;
+                height: 4em;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+        .share-section{
+            height: 50%;
+            padding: 3em;
+            text-align: center;
+            *{
+                margin: .5em auto;
+            }
+            .share-button{
+                display: block;
+                width: 70%;
+                max-width: 400px;
+                padding: 0em 2em;
+                font-size: 14pt;
+                color: $red;
+                font-weight: 800;
+                display: flex;
+                justify-content: space-between;
+                background: transparent;
+                border: 2px solid rgba($color: $white, $alpha: .5);
+                i{
+                    margin-left: .5em;
+                    color: $white;
+                }
+
+            }
+        }
+        .share-section:nth-child(1){
+            padding-top: 2em;
+            background-image: linear-gradient(45deg,$dark-purple,$light-purple);
+            height: 50%;
+            color: $white;
+        }
+        .share-section:nth-child(2){
+            .social-icon-wrapper{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .social-icon{
+                    width: 33%;
+                    svg{
+                        width: 2em;
+                        height: 2em;
+                    }
+                    span{
+                        display: block;
+                        margin-top: 0;
+                        margin-bottom: 0em;
+                    }
+                }
+            }
+        }
+    }
+}

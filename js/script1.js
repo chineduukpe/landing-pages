@@ -46,13 +46,16 @@
         repeat: -1,
     })
 
-    let  contact_animation = gsap.to('.form-area',2,{
-        duration: 2,
-        x: 100,
+    let  contact_animation = gsap.fromTo('.form-area',2,{
+        x: -20,
         // ScrollTrigger:{
         //     trigger:'.contact-section',
         //     start: "top center"
         // }
+    },{
+        x: 50,
+        duration: 1,
+        speed: 50
     })
 
     const tl3 = gsap.timeline();

@@ -162,7 +162,10 @@ $shadow-color: #6a9ee2;
                     font-size: 10pt;
                 }
                 .footer{
-                    font-size: 8pt;
+                    a{
+                        font-size: 8pt;
+                        color: $secondary;
+                    }
                 }
             }
         }

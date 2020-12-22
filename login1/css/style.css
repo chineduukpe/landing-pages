@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:ital,wght@0,300;0,600;1,900&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Noto Sans";
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(45deg, #ddd, #fff, #ddd);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-container .login-wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  max-height: 500px;
+  -webkit-box-shadow: 0 0 15px rgba(106, 158, 226, 0.6);
+          box-shadow: 0 0 15px rgba(106, 158, 226, 0.6);
+  background: #fff;
+  border-radius: 1em;
+}
+
+.login-container .login-wrapper .login-section {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100;
+  padding: 1em;
+}
+
+.login-container .login-wrapper .login-section form {
+  -webkit-box-shadow: 0 0 10px rgba(106, 158, 226, 0.3);
+          box-shadow: 0 0 10px rgba(106, 158, 226, 0.3);
+  border-radius: .7em;
+  text-align: center;
+  width: 97%;
+}
+
+.login-container .login-wrapper .login-section form .form-header {
+  padding: 1.3em .5em;
+  color: #138dff;
+  font-size: 14pt;
+}
+
+.login-container .login-wrapper .login-section form .form-group .form-control {
+  width: 90%;
+  padding: .7em 1em;
+  font-size: 9pt;
+  margin-bottom: 1em;
+  border-radius: .5em;
+  color: rgba(104, 104, 105, 0.7);
+  border: none;
+  border: 1px solid rgba(106, 158, 226, 0.5);
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.login-container .login-wrapper .login-section form .form-group .form-control:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.login-container .login-wrapper .login-section form .term-text {
+  display: block;
+  color: rgba(104, 104, 105, 0.7);
+  margin: 1em auto;
+  margin-bottom: 2em;
+  font-size: 8pt;
+}
+
+.login-container .login-wrapper .login-section form .term-text a {
+  color: #138dff;
+}
+
+.login-container .login-wrapper .login-section form .submit-button {
+  width: 90%;
+  padding: .5em;
+  color: #fff;
+  font-weight: 700;
+  background: #138dff;
+  -webkit-box-shadow: 1em 0 10x rgba(106, 158, 226, 0.6);
+          box-shadow: 1em 0 10x rgba(106, 158, 226, 0.6);
+  border: 0;
+  border-radius: .3em;
+  cursor: pointer;
+  letter-spacing: .15em;
+}
+
+.login-container .login-wrapper .login-section form .submit-button:hover {
+  background: #0073df;
+}
+
+.login-container .login-wrapper .login-section:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-container .login-wrapper .login-section:nth-child(2) .social-login-buttons {
+  position: relative;
+  top: 1em;
+}
+
+.login-container .login-wrapper .login-section:nth-child(2) .social-login-buttons a {
+  padding-left: .4em;
+  -webkit-transition: top 200ms linear;
+  transition: top 200ms linear;
+  top: 0;
+}
+
+.login-container .login-wrapper .login-section:nth-child(2) .social-login-buttons a svg {
+  height: 30px;
+  width: 30px;
+  -webkit-box-shadow: 0 0 10px rgba(106, 158, 226, 0.6);
+          box-shadow: 0 0 10px rgba(106, 158, 226, 0.6);
+  border-radius: .4em;
+}
+
+.login-container .login-wrapper .login-section:nth-child(2) .social-login-buttons a:hover {
+  top: -10px;
+}
+
+.login-container .login-wrapper .login-section:nth-child(2) .social-login-buttons a:hover svg {
+  -webkit-box-shadow: 0 0 10px #6a9ee2;
+          box-shadow: 0 0 10px #6a9ee2;
+}
+
+@media screen and (min-width: 769px) {
+  .login-container .login-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .login-container .login-wrapper .login-section {
+    width: 50%;
+    position: relative;
+  }
+  .login-container .login-wrapper .login-section form {
+    width: 90%;
+  }
+  .login-container .login-wrapper .login-section:nth-child(1) {
+    background: #138dff;
+    border-radius: 1em;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2em;
+  }
+  .login-container .login-wrapper .login-section:nth-child(1) .login-title {
+    margin-bottom: .6em;
+    font-family: "Raleway";
+    font-size: 23pt;
+  }
+  .login-container .login-wrapper .login-section:nth-child(1) p {
+    font-weight: 100;
+    font-size: 10pt;
+  }
+  .login-container .login-wrapper .login-section:nth-child(1) .footer {
+    font-size: 8pt;
+  }
+}
+/*# sourceMappingURL=style.css.map */

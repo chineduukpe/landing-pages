@@ -1,0 +1,169 @@
+@import '../../css/breakpoints';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:ital,wght@0,300;0,600;1,900&display=swap');
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+$primary : rgb(19, 141, 255);
+$secondary: #fff;
+$grey: #686869;
+$shadow-color: #6a9ee2;
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Noto Sans";
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+.login-container{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(45deg,#ddd,#fff,#ddd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login-wrapper{
+        width: 100%;
+        height: 100%;
+        max-width: 900px;
+        max-height: 500px;
+        box-shadow: 0 0 15px rgba($color: $shadow-color, $alpha: 0.6);
+        background: $secondary;
+        border-radius: 1em;
+        
+        .login-section{
+            background: $secondary;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100;
+            padding: 1em;
+            form{
+                box-shadow: 0 0 10px rgba($color: $shadow-color, $alpha: .3);
+                border-radius: .7em;
+                text-align: center;
+                width: 97%;
+                .form-header{
+                    padding: 1.3em .5em;
+                    color: $primary;
+                    font-size: 14pt;
+                }
+                .form-group{
+                    .form-control{
+                        width: 90%;
+                        padding: .7em 1em;
+                        font-size: 9pt;
+                        margin-bottom: 1em;
+                        border-radius: .5em;
+                        color: rgba($color: $grey, $alpha: .7);
+                        border: none;
+                        border: 1px solid rgba($color: $shadow-color, $alpha: .5);
+                        outline: 1px solid rgba($color: $secondary, $alpha: .5);
+                        &:focus{
+                            outline: 2px solid rgba($color: $secondary, $alpha: .5);
+                            // border: $shadow-color;
+                            // outline: none;
+                        }
+                    }
+                }
+                .term-text{
+                    display: block;
+                    color: rgba($color: $grey, $alpha: .7);
+                    margin: 1em auto;
+                    margin-bottom: 2em;
+                    font-size: 8pt;
+                    a{
+                        color: $primary;
+                    }
+                }
+
+                .submit-button{
+                    width: 90%;
+                    padding: .5em;
+                    color: $secondary;
+                    font-weight: 700;
+                    background: $primary;
+                    box-shadow: 1em 0 10x rgba($color: $shadow-color, $alpha: .6);
+                    border: 0;
+                    border-radius: .3em;
+                    cursor: pointer;
+                    letter-spacing: .15em;
+                    &:hover{
+                        background: darken($color: $primary, $amount: 10);
+                    }
+                }
+            }
+        }
+
+        .login-section:nth-child(2){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .social-login-buttons{
+                position: relative;
+                top: 1em;
+                a{
+                    padding-left: .4em;
+                    transition: top 200ms linear;
+                    top: 0;
+                    svg{
+                        height: 30px;
+                        width: 30px;
+                        box-shadow: 0 0 10px rgba($color: $shadow-color, $alpha: .6);
+                        border-radius: .4em;
+                    }
+                    &:hover{
+                        top: -10px;
+                        svg{
+                            
+                        box-shadow: 0 0 10px rgba($color: $shadow-color, $alpha: 1);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: $breakpoint-laptop-min){
+    .login-container{
+        .login-wrapper{
+            flex-direction: row;
+            display: flex;
+            .login-section{
+                width: 50%;
+                position: relative;
+                form{
+                    width: 90%;
+                }
+            }
+            .login-section:nth-child(1){
+                background: $primary;
+                border-radius: 1em;
+                color: $secondary;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 2em;
+                .login-title{
+                    margin-bottom: .6em;
+                    font-family: "Raleway";
+                    font-size: 23pt;
+                }
+                p{
+                    font-weight: 100;
+                    font-size: 10pt;
+                }
+                .footer{
+                    font-size: 8pt;
+                }
+            }
+        }
+    }
+}

@@ -15,8 +15,11 @@ body{
     overflow-x: hidden;
 }
 .share-container{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    max-width: 500px;
+    position: relative;
+    margin: 0 auto;
     .close{
         position: absolute;
         top: 2em;
@@ -28,6 +31,19 @@ body{
         flex-direction: column;
         justify-content: space-evenly;
         height: 100%;
+        &::after{
+            transform: rotate(2deg);
+            content: "";
+            position: absolute;
+            height: 90%;
+            // top: 20%;
+            width: 80%;
+            left: 7%;
+            background: rgba($color: #000000, $alpha: .1);
+            z-index: -1;
+            background: #5a5a5a;
+            box-shadow: -3em 0 20px rgba($color: #6b6b6b, $alpha: .6);
+        }
         .mail-svg{
             // padding: .4em;
             margin: 0;
@@ -58,9 +74,13 @@ body{
                 justify-content: space-between;
                 background: transparent;
                 border: 2px solid rgba($color: $white, $alpha: .5);
+                box-shadow: 0 0 10px rgba($color: rgb(46, 39, 39), $alpha: 1);
+                cursor: pointer;
+                
                 i{
                     margin-left: .5em;
                     color: $white;
+                    height: 100%;
                 }
 
             }
@@ -70,8 +90,17 @@ body{
             background-image: linear-gradient(45deg,$dark-purple,$light-purple);
             height: 50%;
             color: $white;
+            p{
+                line-height: 1.5;
+            }
+            small{
+                display: block;
+                padding-top: 1em;
+                color: rgba($color: $light-grey, $alpha: .7)
+            }
         }
         .share-section:nth-child(2){
+            background: rgba($color: $light-grey, $alpha: 1);
             .social-icon-wrapper{
                 display: flex;
                 flex-direction: row;

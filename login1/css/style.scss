@@ -71,6 +71,23 @@ $shadow-color: #6a9ee2;
                         }
                     }
                 }
+                .hedge-text{
+                    
+                    &::after,&::before{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        height: 2px;
+                        background: $grey;
+                        width: 20px; 
+                    }
+                    &::after{
+                        right: -30px;
+                    }
+                    &::before{
+                        left: -30px;
+                    }
+                }
                 .term-text{
                     display: block;
                     color: rgba($color: $grey, $alpha: .7);

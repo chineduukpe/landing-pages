@@ -78,6 +78,23 @@
   background: whitesmoke;
 }
 
+.login-container .login-wrapper .login-section form .hedge-text::after, .login-container .login-wrapper .login-section form .hedge-text::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background: #686869;
+  width: 20px;
+}
+
+.login-container .login-wrapper .login-section form .hedge-text::after {
+  right: -30px;
+}
+
+.login-container .login-wrapper .login-section form .hedge-text::before {
+  left: -30px;
+}
+
 .login-container .login-wrapper .login-section form .term-text {
   display: block;
   color: rgba(104, 104, 105, 0.7);

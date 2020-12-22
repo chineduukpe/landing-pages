@@ -164,6 +164,7 @@ nav .links-wrapper ul {
 
 nav .links-wrapper ul li {
   list-style: none;
+  margin-top: 1.3em;
 }
 
 nav .links-wrapper ul li a {
@@ -820,6 +821,9 @@ footer .newsletter-holder h4, footer .newsletter-holder small {
         -ms-flex-direction: row;
             flex-direction: row;
     height: 100%;
+  }
+  nav .links-wrapper ul li {
+    margin-top: 0;
   }
   nav .links-wrapper ul li a {
     padding: .3em 1em;

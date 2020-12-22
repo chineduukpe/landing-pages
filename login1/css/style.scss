@@ -5,6 +5,7 @@
 $primary : rgb(19, 141, 255);
 $secondary: #fff;
 $grey: #686869;
+$danger: rgb(218, 86, 86);
 $shadow-color: #6a9ee2;
 
 *{
@@ -162,13 +163,33 @@ $shadow-color: #6a9ee2;
                 }
             }
             .login-section:nth-child(1){
-                background: $primary;
+                background-image: linear-gradient(45deg,darken($color:$primary,$amount: 30) 10%,$primary 90%) ;
                 border-radius: 1em;
                 color: $secondary;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 padding: 2em;
+                overflow: hidden;
+                .balloon{
+                    position: absolute;
+                    background: rgba($primary,.4);
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                }
+                .balloon:first-child{
+                    top: -20px;
+                    left: -20px;
+                }
+                .balloon:nth-child(3){
+                    right: -1.5em;
+                    bottom: -1.5em;
+                    height: 200px;
+                    width: 200px;
+                    animation: balloon-animation 10s linear infinite;
+                    background-image: linear-gradient(-45deg,$primary,rgba($color: $danger, $alpha: .9));
+                }
                 .login-title{
                     margin-bottom: .6em;
                     font-family: "Raleway";
@@ -186,5 +207,16 @@ $shadow-color: #6a9ee2;
                 }
             }
         }
+    }
+}
+
+// Balloon Animation
+@keyframes balloon-animation{
+    0%{
+        box-shadow: 0 0 0 rgba($color: $secondary, $alpha: 1.0);
+    }
+    50%{
+
+        box-shadow: 0 0 10px rgba($color: $secondary, $alpha: .5);
     }
 }

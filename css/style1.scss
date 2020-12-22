@@ -205,6 +205,13 @@ nav{
                 img{
                     width: 100%;
                     height: 100%;
+                    transition: transform 200ms linear;
+                    cursor: pointer;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+                    }
                 }
             }
             .buy-btn{
@@ -738,6 +745,7 @@ footer{
             .product{
                 padding: 0;
                 width: 25%;
+                overflow: hidden;
             }
         }
     }

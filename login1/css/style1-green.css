@@ -57,7 +57,7 @@
 
 .login-container .login-wrapper .login-section form .form-header {
   padding: 1.3em .5em;
-  color: #138dff;
+  color: #13a031;
   font-size: 14pt;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .login-container .login-wrapper .login-section form .term-text a {
-  color: #138dff;
+  color: #13a031;
 }
 
 .login-container .login-wrapper .login-section form .submit-button {
@@ -112,7 +112,7 @@
   padding: .5em;
   color: #fff;
   font-weight: 700;
-  background: #138dff;
+  background: #13a031;
   -webkit-box-shadow: 1em 0 10x rgba(106, 158, 226, 0.6);
           box-shadow: 1em 0 10x rgba(106, 158, 226, 0.6);
   border: 0;
@@ -122,7 +122,7 @@
 }
 
 .login-container .login-wrapper .login-section form .submit-button:hover {
-  background: #0073df;
+  background: #0e7223;
 }
 
 .login-container .login-wrapper .login-section:nth-child(2) {
@@ -199,7 +199,7 @@
     width: 90%;
   }
   .login-container .login-wrapper .login-section:nth-child(1) {
-    background-image: linear-gradient(45deg, #003f79 10%, #138dff 90%);
+    background-image: linear-gradient(45deg, #031707 10%, #13a031 90%);
     border-radius: 1em;
     color: #fff;
     display: -webkit-box;
@@ -217,7 +217,7 @@
   }
   .login-container .login-wrapper .login-section:nth-child(1) .balloon {
     position: absolute;
-    background: rgba(19, 141, 255, 0.4);
+    background: rgba(19, 160, 49, 0.4);
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -233,7 +233,7 @@
     width: 200px;
     -webkit-animation: balloon-animation 10s linear infinite;
             animation: balloon-animation 10s linear infinite;
-    background-image: linear-gradient(-45deg, #138dff, rgba(218, 86, 86, 0.9));
+    background-image: linear-gradient(-45deg, #13a031, rgba(218, 86, 86, 0.9));
   }
   .login-container .login-wrapper .login-section:nth-child(1) .login-title {
     margin-bottom: .6em;

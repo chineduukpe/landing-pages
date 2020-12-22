@@ -19,6 +19,11 @@
         })
     })
 
+    // Remove Loader on load
+    setTimeout(function (params) {
+        document.querySelector('.page-loader').classList.remove('show');
+    },2000);
+
     // START ANIMATIONS
     
     gsap.registerPlugin(ScrollTrigger);
@@ -33,7 +38,7 @@
     
     text_tl.from('.hero-text-wrapper',{
         x: -2000,
-        delay: 1,
+        delay: 2,
         duration: 2,
         ease: Power4.easeOut,
     })

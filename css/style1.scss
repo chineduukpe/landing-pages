@@ -25,6 +25,27 @@ body{
     background-size: cover;
 }
 
+.page-loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $white;
+    z-index: -10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s linear;
+    opacity: 0;
+    font-family: "comic sans";
+}
+
+.page-loader.show{
+    opacity: 1;
+    z-index: 19999;
+}
+
 input,textarea{
     outline: 2px solid $light-grey;
 
@@ -153,7 +174,7 @@ nav{
     flex-direction: column;
     width: 100%;
     padding-top: 2em;
-    background: linear-gradient(45deg, $black 15%, $grey 70%, $black 15%);
+    background-image: linear-gradient(45deg, $grey , darken($grey,30) 40%);
     border-top: 2px solid $primary;
     >h1{
         font-size: 1em;
@@ -163,10 +184,11 @@ nav{
         flex-direction: column;
         padding: 2em;
         .product{
+            border-radius: .6em;
             .product-like-button{
                 position: absolute;
-                top: 1em;
-                right: 1em;
+                top: .5em;
+                right: .5em;
                 font-size: 1.2em;
                 z-index: 2;
                 color: $light-grey;
@@ -186,10 +208,11 @@ nav{
             .product-description{
                 padding: 1em;
                 h4,p,small{
-                    margin-top: 1em;
+                    margin-top: .2em;
                 }
                 small{
                     top:.3em;
+                    display: block;
                     i{
                         cursor: pointer;
                     }
@@ -198,10 +221,14 @@ nav{
                     font-size: .7em;
                     color: $grey;
                 }
+                h4{
+                    font-size: 9pt;
+                }
             }
             
             .product-img{
                 height: 60%;
+                overflow: hidden;
                 img{
                     width: 100%;
                     height: 100%;
@@ -217,13 +244,15 @@ nav{
             .buy-btn{
                 display: block;
                 width: 90%;
-                margin: .3em auto 1em auto;
-                padding: .5em 2.2em;
+                margin: .5em auto 1em auto;
+                padding: .3em 2.2em;
                 text-align: center;
                 font-size: .7em;
                 border: 2px solid $primary;
                 border-radius: .6em;
                 color: $primary;
+                top: .2em;
+                
                 &:hover{
                     background: $primary;
                     color: $white;
@@ -744,8 +773,7 @@ footer{
             
             .product{
                 padding: 0;
-                width: 25%;
-                overflow: hidden;
+                width: 20%;
             }
         }
     }

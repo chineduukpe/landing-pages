@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="login1/css/style.css">
+    <link rel="stylesheet" href="login1/css/style.css" id="theme-css">
 </head>
 <body>
     <div class="login-container">
@@ -89,5 +89,25 @@
 </div>
 </div>
 </div>
+
+<div class="theme-switcher">
+    <p>Themes</p>
+    <div class="colors">
+        <a href="javascript:;" data-theme='login1/css/style1-red.css'>Red</a>
+        <a href="javascript:;" data-theme="login1/css/style1-blue.css" style="background: #0000ff;">Blue</a>
+        <a href="javascript:;" data-theme='login1/css/style1-green.css' style="background: green;">Green</a>
+    </div>
+</div>
+<script>
+    document.querySelectorAll('.theme-switcher a').forEach(function(element){
+        element.addEventListener('click',function(evt){
+            let newTheme = this.getAttribute('data-theme');
+            
+            evt.preventDefault();
+            document.querySelector('#theme-css').setAttribute('href',newTheme);
+            
+        })
+    })
+</script>
 </body>
 </html>

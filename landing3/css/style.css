@@ -204,8 +204,8 @@ nav.show {
   border-radius: .4em;
   margin-top: 20px;
   overflow: hidden;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#8a1111), to(#8a3403)) !important;
-  background-image: linear-gradient(#8a1111, #8a3403) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00489b), to(#000)) !important;
+  background-image: linear-gradient(#00489b, #000) !important;
   border-width: 3px;
 }
 
@@ -230,6 +230,9 @@ nav.show {
 
 @media screen and (min-width: 769px) {
   .close-nav, .nav-toggle {
+    display: none;
+  }
+  .mobile-topbar {
     display: none;
   }
   nav {
@@ -286,7 +289,7 @@ nav.show {
     background: #1b191a;
   }
   nav .nav-links .link-item:hover .drop-down {
-    border-bottom: 2px solid #970000;
+    border-bottom: 2px solid #00489b;
   }
   .hero-gallery-img {
     position: absolute;

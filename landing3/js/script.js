@@ -25,7 +25,7 @@
     },"-=.6")
     .from('.hero-gallery-img',1,{
         scale: 0,
-        ease: "back.out"
+        ease: "bounce.out"
     },"-=1")
 
     // END ANIMATION

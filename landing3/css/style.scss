@@ -8,7 +8,8 @@ $dark-grey2: rgb(27,25,26);
 $black: #000;
 $white: #fff;
 $red: #970000;
-$primary: $red;
+$blue: rgb(0, 72, 155);
+$primary: $blue;
 
 
 *{
@@ -185,7 +186,7 @@ nav.show{
         margin-top: 20px;
         overflow: hidden;
 
-        background-image: linear-gradient(#8a1111,#8a3403) !important;
+        background-image: linear-gradient($primary,$black) !important;
         border-width: 3px;
         &:hover{
             background-image: linear-gradient(#660c0c,#692803) !important;
@@ -208,6 +209,9 @@ nav.show{
 
 @media screen and (min-width: $breakpoint-laptop-min){
     .close-nav,.nav-toggle{
+        display: none;
+    }
+    .mobile-topbar{
         display: none;
     }
     nav{

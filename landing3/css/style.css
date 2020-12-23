@@ -308,6 +308,7 @@ nav.show {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-top: 0;
   }
   .hero-section .hero-content {
     width: 50%;

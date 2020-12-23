@@ -78,6 +78,43 @@
   background: whitesmoke;
 }
 
+.login-container .login-wrapper .login-section form .form-group .input-alert {
+  position: absolute;
+  width: 80%;
+  height: 75%;
+  left: 4em;
+  bottom: -55%;
+  z-index: 100;
+  font-size: 7pt;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background: #138dff;
+  color: #fff;
+  word-wrap: break-word;
+  padding: 10px;
+}
+
+.login-container .login-wrapper .login-section form .form-group .input-alert::after {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: -8px;
+  left: 10px;
+  background: #138dff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.login-container .login-wrapper .login-section form .form-group .input-alert.alert-danger {
+  background: #da5656;
+  color: #000;
+}
+
+.login-container .login-wrapper .login-section form .form-group .input-alert.alert-danger::after {
+  background: #da5656;
+}
+
 .login-container .login-wrapper .login-section form .hedge-text::after, .login-container .login-wrapper .login-section form .hedge-text::before {
   content: '';
   position: absolute;
@@ -197,6 +234,25 @@
   }
   .login-container .login-wrapper .login-section form {
     width: 90%;
+  }
+  .login-container .login-wrapper .login-section form .form-group .input-alert {
+    position: absolute;
+    width: 40%;
+    height: 75%;
+    right: 0em;
+    left: -40%;
+    top: 0px;
+    margin-left: 0 auto;
+  }
+  .login-container .login-wrapper .login-section form .form-group .input-alert::after {
+    top: 7px;
+    left: 140px;
+    background: #138dff;
+  }
+  .login-container .login-wrapper .login-section form .form-group .input-alert i {
+    margin-right: 5px;
+    color: #fff;
+    left: -2em;
   }
   .login-container .login-wrapper .login-section:nth-child(1) {
     background-image: linear-gradient(45deg, #003f79 10%, #138dff 90%);

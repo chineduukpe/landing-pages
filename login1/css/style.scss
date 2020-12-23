@@ -74,6 +74,39 @@ $shadow-color: #6a9ee2;
                             // outline: none;
                         }
                     }
+
+                    .input-alert{
+                        position: absolute;
+                        width: 80%;
+                        height: 75%;
+                        left: 4em;
+                        bottom: -55%;
+                        z-index: 100;
+                        // margin-left: 0 auto;
+                        font-size: 7pt;
+                        box-shadow: 0 0 10px rgba($color: #000, $alpha: .4);
+                        background: $primary;
+                        color: #fff;
+                        word-wrap: break-word;
+                        padding: 10px;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            height: 20px;
+                            width: 20px;
+                            top: -8px; 
+                            left: 10px;
+                            background: $primary;
+                            transform: rotate(45deg);
+                        }
+                    }
+                    .input-alert.alert-danger{
+                        background: $danger;
+                        color: #000;
+                        &::after{
+                            background: $danger;
+                        }
+                    }
                 }
                 .hedge-text{
                     
@@ -167,6 +200,7 @@ $shadow-color: #6a9ee2;
     font-size: 8pt;
     color: #fff;
   }
+
   
 
 @media screen and (min-width: $breakpoint-laptop-min){
@@ -179,6 +213,28 @@ $shadow-color: #6a9ee2;
                 position: relative;
                 form{
                     width: 90%;
+                    .form-group{
+                        .input-alert{
+                            position: absolute;
+                            width: 40%;
+                            height: 75%;
+                            right: 0em;
+                            left: -40%;
+                            top: 0px;
+                            margin-left: 0 auto;
+                            &::after{
+                                top: 7px; 
+                                left: 140px;
+                                background: $primary;
+                            }
+                            i{
+                                margin-right: 5px;
+                                color: $secondary;
+                                // position: relative;
+                                left: -2em;
+                            }
+                        }
+                    }
                 }
             }
             .login-section:nth-child(1){

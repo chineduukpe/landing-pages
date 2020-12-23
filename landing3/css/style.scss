@@ -127,11 +127,9 @@ nav{
                 }
             }
             &:hover{
-                background: $dark-grey2;
                 .drop-down{
                     height: auto;
                     padding: 30px;
-                    border-bottom: 2px solid $primary;
                 }
             }
         }
@@ -169,6 +167,7 @@ nav.show{
         border: 0;
         border-radius: .4em;
         margin-top: 20px;
+        overflow: hidden;
 
         background-image: linear-gradient(#8a1111,#8a3403) !important;
         border-width: 3px;
@@ -239,13 +238,21 @@ nav.show{
                             }
                         }
                 }
+                &:hover{
+                    
+                background: $dark-grey2;
+                .drop-down{
+                    
+                    border-bottom: 2px solid $primary;
+                }
+                }
             }
         }
     }
 
     .hero-gallery-img{
         position: absolute;
-        top: -40%;
+        top: -35%;
         right: -70%;
         z-index: -1;
     }
@@ -257,6 +264,7 @@ nav.show{
     .hero-section{
         width: 70%;
         margin: 100px auto;
+        margin-top: 50px;
         display: flex;
         flex-direction: row;
         .hero-content{

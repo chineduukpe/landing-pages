@@ -141,14 +141,9 @@ nav .nav-links .link-item .drop-down .drop-down-wrapper {
           flex-direction: row;
 }
 
-nav .nav-links .link-item:hover {
-  background: #1b191a;
-}
-
 nav .nav-links .link-item:hover .drop-down {
   height: auto;
   padding: 30px;
-  border-bottom: 2px solid #970000;
 }
 
 nav.show {
@@ -184,6 +179,7 @@ nav.show {
   border: 0;
   border-radius: .4em;
   margin-top: 20px;
+  overflow: hidden;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#8a1111), to(#8a3403)) !important;
   background-image: linear-gradient(#8a1111, #8a3403) !important;
   border-width: 3px;
@@ -262,9 +258,15 @@ nav.show {
   nav .nav-links .link-item .drop-down ul li a {
     line-height: 30px;
   }
+  nav .nav-links .link-item:hover {
+    background: #1b191a;
+  }
+  nav .nav-links .link-item:hover .drop-down {
+    border-bottom: 2px solid #970000;
+  }
   .hero-gallery-img {
     position: absolute;
-    top: -40%;
+    top: -35%;
     right: -70%;
     z-index: -1;
   }
@@ -274,6 +276,7 @@ nav.show {
   .hero-section {
     width: 70%;
     margin: 100px auto;
+    margin-top: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

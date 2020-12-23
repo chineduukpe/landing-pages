@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&Noto+Sans&family=Raleway:ital,wght@0,300;0,600;1,900&display=swap");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 * {
-  font-family: "Open Sans";
+  font-family: "Noto Sans";
   padding: 0;
   margin: 0;
   list-style: none;
@@ -177,17 +177,21 @@ nav.show {
 .hero-section .learn-btn {
   width: 50%;
   height: 40px;
-  color: #000;
+  color: #fff;
   -webkit-box-shadow: 0 0 0 #000;
           box-shadow: 0 0 0 #000;
   cursor: pointer;
   border: 0;
   border-radius: .4em;
   margin-top: 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8a1111), to(#8a3403)) !important;
+  background-image: linear-gradient(#8a1111, #8a3403) !important;
+  border-width: 3px;
 }
 
 .hero-section .learn-btn:hover {
-  background: #928185;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#660c0c), to(#692803)) !important;
+  background-image: linear-gradient(#660c0c, #692803) !important;
 }
 
 .hero-gallery-img {
@@ -229,7 +233,7 @@ nav.show {
   nav .nav-links .link-item .drop-down {
     position: fixed;
     height: 0;
-    top: 49px;
+    top: 47px;
     padding: 0;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -301,7 +305,7 @@ nav.show {
 
 @media screen and (min-width: 1201px) {
   .hero-gallery-img {
-    right: -50%;
+    right: -60%;
   }
 }
 /*# sourceMappingURL=style.css.map */

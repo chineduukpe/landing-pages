@@ -210,8 +210,8 @@ nav.show {
 }
 
 .hero-section .learn-btn:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#660c0c), to(#692803)) !important;
-  background-image: linear-gradient(#660c0c, #692803) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#003068), to(#000)) !important;
+  background-image: linear-gradient(#003068, #000) !important;
 }
 
 .hero-gallery-img {

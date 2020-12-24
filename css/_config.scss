@@ -1,0 +1,24 @@
+@import 'custom_variables' ;
+@import 'breakpoints' ;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&family=Raleway:wght@200;400&display=swap');
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Nunito Sans', Tahoma, sans-serif;
+    position: relative;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth !important;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100vw;
+}

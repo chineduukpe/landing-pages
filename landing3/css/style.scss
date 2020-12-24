@@ -55,6 +55,7 @@ body{
     background: $black;
     display: flex;
     justify-content: space-between;
+    z-index: 99;
     span{
         line-height: 3em;
         margin-left: 1em;

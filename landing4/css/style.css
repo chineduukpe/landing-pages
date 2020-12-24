@@ -52,6 +52,10 @@ body {
   padding: 1em;
 }
 
+.quote-fluid .content-wrapper * {
+  color: #000;
+}
+
 .quote-fluid .content-wrapper h4 {
   font-family: 'Langar', cursive;
   font-size: 28pt;
@@ -94,6 +98,10 @@ body {
   max-width: "480px";
   min-height: 100vh;
   padding: 1.5em;
+}
+
+.container .quote-fluid * {
+  color: #ffffff;
 }
 
 .container .header {

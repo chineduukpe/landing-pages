@@ -1,5 +1,352 @@
 @import '../../css/config';
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+
+$purple: #7b1cdb;
+$white: #ffffff;
+$orange: rgb(219, 101, 4);
+$primary: $purple;
+
+*{
+    color: $white;
+    &:focus{
+        outline: none;
+    }
+}
 
 body{
-    background-image: linear-gradient($red,$green) !important;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+// START QUOTE STYLE
+.quote-fluid{
+    width: 100%;
+    height: 100%;
+
+    .content-wrapper{
+        width: 90%;
+        max-width: 500px;
+        min-height: 400px;;
+        box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.4);
+        margin: 50px auto;
+        position: relative;
+        padding: 1em;
+        h4{
+            font-family: 'Langar', cursive;
+            font-size: 28pt;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .article{
+            padding-left: 1em;
+            padding-bottom: 1em;
+            margin-bottom: 10px;
+            &::before{
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 3px;
+                // width: 100%;
+                top: 0;
+                left: -.2em;
+                background-image: linear-gradient( royalblue,rgb(123, 216, 35));
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 10px;
+                height: 10px;
+                left: -.4em;
+                // border-radius: 50%;
+                transform: rotate(45deg);
+                background: royalblue;
+            }
+        }
+    }
+}
+// END QUOTE STYLE
+
+// MOBILE FIRST 
+
+.container{
+    background: $purple;
+    width: 100%;
+    max-width: $breakpoint-mobile-max;
+    min-height: 100vh;
+    padding: 1.5em;
+    .header{
+        padding: 1em 0;
+        h4{
+            line-height: 25px;
+            font-size: 18pt;
+        }
+        p{
+            font-size: 18pt;
+        }
+    }
+
+    .ad-pane{
+        width: 100%;
+        background: $white;
+        border-radius: .5em;
+        margin: 1em auto;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        box-shadow: 0 0 10px rgba($color: $black, $alpha: .4);
+        .icon-wrapper,button{
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $white;
+            border: 0;
+            border-radius: .5em;
+            font-size: 1.3em;
+        }
+        button{
+            i{
+                background: $orange;
+                color: $white;
+                border-radius: 50%;
+                padding: .4em;
+            }
+        }
+        i{
+            color: $orange;
+            line-height: 100%;
+            
+        }
+        .ad-text-wrapper{
+            width: 60%;
+            padding: .3em 0;
+            h4{
+                font-size: .8em;
+
+            }
+            p{
+                font-size: .7em;
+            }
+            *{
+                color: $black;
+            }
+        }
+
+    }
+    .tracker-wrapper{
+        margin: 1.5em auto;
+        margin-top: 3em;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        .tracker-text-wrapper{
+            width: 50%;
+            h3{
+                font-size: 13pt;
+            }
+            p{
+                font-size: 10pt;
+                font-weight: 300;
+            }
+        }
+        .tracker{
+            width: 40%;
+            text-align: center;
+            h1{
+                border: 1px solid $white;
+                border-radius: 50%;
+                width: 4em;
+                height: 4em;
+                // line-height: 100px;
+                z-index: 2;
+                background-clip: content-box;
+                background: $primary;
+                padding-top: 1em;
+                font-size: 16pt;
+                top: -.5em;
+                font-weight: 800;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient($primary, $orange);
+                    border-radius: 50%;
+                    transform: scale(1.2);
+                    z-index: -1;
+                }
+            }
+            // line-height: 100%;
+        }
+    }
+
+    .activities-section{
+        .activities-header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 1em;
+            >button{
+                background: none;
+                // border: 0;
+                border: 1px solid $orange;
+                padding: 0 1em;
+                font-size: 8pt;
+                color: $orange;
+                border-radius: 2em;
+
+            }
+            h3{
+                margin: .4em 0;
+                font-size: 12pt;
+                font-weight: 600;
+            }
+        }
+
+        .activities-wrapper{
+            .activity{
+                padding: 1em;
+                padding-left: 1.4em;
+                border-left: 3px solid $white;
+                &::before,&::after{
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: $white;
+                    content: '';
+                    left: -.4em;
+                    top: -.4em;
+                }
+                .activity-header{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    span{
+                        font-weight: 700;
+                    }
+                    a{
+                        color: $white;
+                    }
+                }
+                p{
+                    font-size: 10pt;
+                    padding-top: .4em;
+                }
+            }
+
+            .activity.active{
+                border-left-color: $green;
+                &::before,&::after{
+                    background: $green;
+                }
+            }
+        }
+    }
+}
+
+.popup-container.show{
+    top: 7em;
+}
+.popup-container{
+    position: fixed;
+    left: 0;
+    background: $white;
+    width: 100%;
+    min-height: calc(100% - 7em);
+    border-radius: 3em 3em 0 0;
+    z-index: 100;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 200ms linear;
+    box-shadow: 0 -10px 12px rgba($color: #000000, $alpha: .2);
+    top: 85%;
+    *{
+        color: $black;
+        border: 0;
+    }
+    .popup-header{
+        margin: 1em 0;
+    }
+    .popup-section{
+        input,select{
+            border: 1px solid rgba($black,.2);
+            padding: .1em .7em;
+            margin-bottom: .3em;
+            border-radius: .6em;
+        }
+        option{
+            background: $primary !important;
+        }
+        h3{
+            font-weight: 600;
+            margin-bottom: .3em;
+            font-size: 12pt;
+            color: lighten($color: $black, $amount: 50);
+        }
+        textarea{
+            width: 100%;
+            background: darken($color: $white, $amount: 5);
+            padding: 1em;
+        }
+    }
+    .popup-footer{
+        display: flex;
+        justify-content: space-between;
+        button{
+            width: 40%;
+            padding: .6em 2em;
+            border: 0;
+            border-radius: 1em;
+            background: $orange;
+            color: $white;
+            cursor: pointer;
+        }
+        button:nth-child(1){
+            background: $primary;
+            
+        }
+    }
+}
+
+// END MOBILE FIRST
+
+
+@media screen and (min-width: $breakpoint-laptop-min){
+    // START QUOTE STYLE
+    .quote-fluid{
+        .content-wrapper{
+            margin: 100px auto;
+            padding: 4em;
+        }
+    }
+    // END QUOTE STYLE
+    body{
+        width: 480px;
+        position: relative;
+        margin: 0 auto;
+        padding: 2em;
+        border-radius: 2em;
+        .container{
+            border-radius: 2em;
+        }
+        .popup-container{
+            width: 480px;
+            margin-left:26vw;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-desktop-min){
+    .popup-container{
+        margin-left: 40%;
+    }
 }

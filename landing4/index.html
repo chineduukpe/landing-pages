@@ -7,6 +7,92 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="header">
+            <h4 class="greeting">Good Evening</h4>
+            <p class="username">Jane</p>
+        </div>
+        <div class="ad-pane">
+            <span class="icon-wrapper"><i class="fa fa-thumbs-up"></i></span>
+            <div class="ad-text-wrapper">
+                <h4>High-five!</h4>
+                <p>We are here to serve you and keep your plans.</p>
+            </div>
+            <button><i class="fa fa-link"></i></button>
+        </div>
+        <div class="tracker-wrapper">
+            <div class="tracker-text-wrapper">
+                <h3>Completion Tracker</h3>
+                <p>You completed <strong>2</strong> of <strong>4</strong> tasks already!</p>
+            </div>
+            <div class="tracker">
+                <h1>50%</h1>
+            </div>
+        </div>
+        <div class="activities-section">
+            <div class="activities-header">
+                <h3>Today's Activities</h3>
+                <button class="add-btn">add</button>
+            </div>
+            <div class="activities-wrapper">
+                <div class="activity active">
+                    <div class="activity-header">
+                        <span>8:23am</span>
+                        <a href="javascript:;" class="edit-task">edit</a>
+                    </div>
+                    <p>I am to mow the lawn this morning. Else I kill somebody</p>
+                </div>
+                <div class="activity">
+                    <div class="activity-header">
+                        <span>8:23am</span>
+                        <a href="javascript:;" class="edit-task">edit</a>
+                    </div>
+                    <p>I am to mow the lawn this morning. Else I kill somebody</p>
+                </div>
+                <div class="activity">
+                    <div class="activity-header">
+                        <span>8:23am</span>
+                        <a href="javascript:;" class="edit-task">edit</a>
+                    </div>
+                    <p>I am to mow the lawn this morning. Else I kill somebody</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-container">
+        <h3 class="popup-header">Editing Activity</h3>
+        <div class="popup-section">
+            <h3 class="title"><i class="fa fa-clock-o"></i> Select a time</h3>
+            <input type="date" name="" id=""> to <input type="date" name="" id="">
+        </div>
+        <div class="popup-section">
+            
+            <h3 class="title"><i class="fa fa-edit"></i> Add a description</h3>
+            <textarea name="" id="" rows="4"></textarea>
+        </div>
+        <div class="popup-section">
+            <h3 class="title"><i class="fa fa-alarm-clock"></i> Set an alarm</h3>
+            <select name="" id="">
+                <option value="">Pick a time</option>
+            </select>
+        </div>
+        <div class="popup-footer">
+            <button>Save</button>
+            <button class="close-edit-popup">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        const toggleEditPopup = function(){
+            document.querySelector('.popup-container').classList.toggle('show');
+        }
+        document.querySelectorAll('.edit-task').forEach(function(element){
+            element.addEventListener('click',toggleEditPopup);
+        })
+        document.querySelector('.close-edit-popup').addEventListener('click',toggleEditPopup);
+        document.querySelector('.container').addEventListener('click',function(){
+            
+        });
+    </script>
 </body>
 </html> 

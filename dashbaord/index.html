@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="overlay">c
+        <div class="overlay-section first"></div>
+        <div class="overlay-section second"></div>
+        <div class="overlay-section third"></div>
+    </div>
     <div class="dashboard">
         <nav>
             <div class="brand">
-                <span>Looking ng</span>
+                <span>Looking<span class="text-danger">ng</span></span>
             </div>
             <div class="header-links">
                 <ul>
@@ -222,7 +227,15 @@
             gsap.from('.card-item',1,{
                 y: 100,
                 stagger: .2,
+                delay: 1,
             });
+
+            gsap.to('.overlay .overlay-section',{
+                left: -10000,
+                duration: 3,
+                stagger: .1,
+                delay:1,
+            })
         }
         
 

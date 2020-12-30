@@ -63,6 +63,24 @@
         speed: 50
     })
 
+    gsap.from('.products-section .product',1,{
+        top: -100,
+        stagger: .1,
+        scrollTrigger: {trigger: '.products-section'}
+    })
+
+    // REVIEW TIMELINE
+    gsap.from('.review-wrapper .review',1.5,{
+        scale: .2, 
+        stagger: .3,
+        x: 200,
+        scrollTrigger: {
+            trigger: '.review-section',
+            start: "top center"
+        }
+    })
+
+    // CONTACT SECTION TIMELINE
     const tl3 = gsap.timeline();
 
     const controller = new ScrollMagic.Controller();

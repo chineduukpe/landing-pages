@@ -119,7 +119,7 @@ img{
 
     
     .side-menu{
-        position: fixed;
+        position: fixed !important;
         top: 0;
         @include cover();
         left: -110vw;

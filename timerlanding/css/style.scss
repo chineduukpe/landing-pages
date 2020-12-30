@@ -1,0 +1,73 @@
+@import '../../css/config';
+
+$purple : #55007c;
+$primary: $purple;
+
+.timer-container{
+    width: 100vw;
+    height: 100vh;
+    background: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../img/bg/bg3.jpg');
+
+    .timer-wrapper{
+        width: 90%;
+        max-width: 900px;
+        background: rgba($color: $white, $alpha: .5);
+        padding: 3em;
+        display: flex;
+        flex-direction: row;
+        *{
+            z-index: 2;
+        }
+
+        .timer-text-wrapper,.timer{
+            width: 50%;
+        }
+        .timer-text-wrapper{
+            h1{
+                font-size: 2em;
+            }
+        }
+        .timer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            border-bottom: 1px solid salmon;
+            span{
+                width: 20%;
+                background: $primary;
+                height: 10%;
+                bottom:0;
+                position: absolute; 
+                bottom: 0;
+                left: auto;
+                border-right: 2px solid $white; 
+                text-align: center;
+                color: $white;
+            }
+            span:nth-child(1){
+                height: 20%;
+                left: 20%;
+                background: lighten($primary,20);
+            }
+            span:nth-child(2){
+                height: 40%;
+                left: 40%;
+                background: lighten($primary,20);
+            }
+            span:nth-child(3){
+                height: 30%;
+                left: 60%;
+                background: lighten($primary,20);
+            }
+            span:nth-child(4){
+                height: 10%;
+                left: 80%;
+                background: lighten($primary,20);
+            }
+        }
+    }
+}
